@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
@@ -53,20 +52,31 @@ class _LoginPageState extends State<LoginPage> {
             PasswordTextField(),
             Gap(15),
             ForgetPassword(),
-
-            ElevatedButton(
-              onPressed: onPressed, 
-            child:
-             Text('Login?',
-              style: TextStyle(
-                  fontFamily: AppConstant.fontName,
-                  fontSize: 15,  
-                  color: Colors.black,
-                  fontWeight: FontWeight.w300)),)
+            Gap(50),
+            LoginButton(),
           ],
         ),
       ),
     );
+  }
+}
+
+class LoginButton extends StatelessWidget {
+  const LoginButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: (){},
+    child:
+     const Text('Login?',
+      style: TextStyle(
+          fontFamily: AppConstant.fontName,
+          fontSize: 15,  
+          color: Colors.black,
+          fontWeight: FontWeight.w300)),);
   }
 }
 
