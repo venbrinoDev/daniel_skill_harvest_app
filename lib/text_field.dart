@@ -9,17 +9,17 @@ class EmailTextFild extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
-      style: TextStyle(color: Colors.black),
+      style: const TextStyle(color: Colors.black),
       decoration: InputDecoration(
-        label: Text('Email'),
-        labelStyle: TextStyle(color: Colors.grey),
+        label: const Text('Your Email'),
+        labelStyle: const TextStyle(color: Colors.grey),
         hintText: 'Enter your email',
         hintStyle: const TextStyle(color: Colors.grey),
         border: OutlineInputBorder(
           borderSide: const BorderSide(width: 1, color: Colors.grey),
           borderRadius: BorderRadius.circular(15)),
-          errorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey)
+          errorBorder: const OutlineInputBorder(
+            borderSide: BorderSide(width: 1, color: Colors.grey)
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(width: 1, color: Colors.grey),
@@ -48,7 +48,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.visiblePassword,
-      style: TextStyle(color: Colors.black),
+      style: const TextStyle(color: Colors.black),
       obscureText: toggled,
       decoration: InputDecoration(
         suffixIcon: IconButton(
@@ -64,15 +64,15 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
            },
            ),        
 
-        label: Text('Password'),
-        labelStyle: TextStyle(color: Colors.grey),
+        label: const Text('Password'),
+        labelStyle: const TextStyle(color: Colors.grey),
         hintText: 'Enter your password',
         hintStyle: const TextStyle(color: Colors.grey),
         border: OutlineInputBorder(
             borderSide: const BorderSide(width: 1, color: Colors.grey),
             borderRadius: BorderRadius.circular(15)),
-        errorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey)
+        errorBorder: const OutlineInputBorder(
+            borderSide: BorderSide(width: 1, color: Colors.grey)
         ),
         focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(width: 1, color: Colors.grey),
