@@ -1,0 +1,4 @@
+#Tue Mar 26 13:53:14 WAT 2024
+base.0=/Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

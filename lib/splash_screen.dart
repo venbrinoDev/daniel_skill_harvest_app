@@ -59,7 +59,7 @@ class _SpalshScreenState extends State<SpalshScreen> {
               'We borrow to all',
               style: TextStyle(
                   fontFamily: AppConstant.fontName,
-                  fontSize: 14,
+                  fontSize: 20,
                   fontWeight: FontWeight.w300),
             )
           ],

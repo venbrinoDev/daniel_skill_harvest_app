@@ -1,0 +1,12 @@
+com.example.skill_harvest_app-jetified-annotation-experimental-1.1.0-0 /Users/udoncydaniel/.gradle/caches/transforms-3/09db32a73384ac2dccccf916d7dc0262/transformed/jetified-annotation-experimental-1.1.0/res
+com.example.skill_harvest_app-core-1.6.0-1 /Users/udoncydaniel/.gradle/caches/transforms-3/168e459aae59caaab0d2c703cf9d67ab/transformed/core-1.6.0/res
+com.example.skill_harvest_app-jetified-window-1.0.0-beta04-2 /Users/udoncydaniel/.gradle/caches/transforms-3/29fe38a5fd6c3bf46cd8e59c2b63489e/transformed/jetified-window-1.0.0-beta04/res
+com.example.skill_harvest_app-jetified-window-java-1.0.0-beta04-3 /Users/udoncydaniel/.gradle/caches/transforms-3/978180320ed1d29d66a82edc9d24751e/transformed/jetified-window-java-1.0.0-beta04/res
+com.example.skill_harvest_app-debug-4 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/android/app/src/debug/res
+com.example.skill_harvest_app-main-5 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/android/app/src/main/res
+com.example.skill_harvest_app-pngs-6 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/generated/res/pngs/debug
+com.example.skill_harvest_app-resValues-7 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/generated/res/resValues/debug
+com.example.skill_harvest_app-rs-8 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/generated/res/rs/debug
+com.example.skill_harvest_app-mergeDebugResources-9 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
+com.example.skill_harvest_app-mergeDebugResources-10 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+com.example.skill_harvest_app-merged_res-11 /Users/udoncydaniel/Documents/GitHub/skill_harvest_app/build/app/intermediates/merged_res/debug
