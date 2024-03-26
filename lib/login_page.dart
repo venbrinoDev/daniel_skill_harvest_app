@@ -1,12 +1,16 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
+import 'package:skill_harvest_app/text_field.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
   @override
   State<LoginPage> createState() => _LoginPageState();}
+
+
 class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -37,16 +41,28 @@ class _LoginPageState extends State<LoginPage> {
               Gap(5),
               EnterDetailsText()],),),
         backgroundColor: Colors.grey.withOpacity(0.2),),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          crossAxisAlignment: CrossAxisAlignment.center, 
+          children: const [
             Gap(20),
             EmailTextFild(),
-            Gap(20),
-            PasswordTextField()
+            Gap(30),
+            PasswordTextField(),
+            Gap(15),
+            ForgetPassword(),
+
+            ElevatedButton(
+              onPressed: onPressed, 
+            child:
+             Text('Login?',
+              style: TextStyle(
+                  fontFamily: AppConstant.fontName,
+                  fontSize: 15,  
+                  color: Colors.black,
+                  fontWeight: FontWeight.w300)),)
           ],
         ),
       ),
@@ -54,70 +70,25 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-class EmailTextFild extends StatelessWidget {
-  const EmailTextFild({
+class ForgetPassword extends StatelessWidget {
+  const ForgetPassword({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      style: TextStyle(color: Colors.black),
-      decoration: InputDecoration(
-        label: Text('Your   Email'),
-        labelStyle: TextStyle(color: Colors.grey),
-        hintText: 'Enter your email',
-        hintStyle: const TextStyle(color: Colors.grey),
-        border: OutlineInputBorder(
-          borderSide: const BorderSide(width: 1, color: Colors.grey),
-          borderRadius: BorderRadius.circular(15)),
-          errorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey)
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey),
-            borderRadius: BorderRadius.circular(15)),
-            enabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(width: 1, color: Colors.grey),
-              borderRadius: BorderRadius.circular(15)
-            ),
+    return TextButton(
+      onPressed: () {},
+      child: Align(
+        alignment: Alignment.centerRight,
+        child: Text('Forgot password?',
+              style: TextStyle(
+                decoration: TextDecoration.underline,
+                  fontFamily: AppConstant.fontName,
+                  fontSize: 15,  
+                  color: Colors.black,
+                  fontWeight: FontWeight.w300)),
       ),
     );
   }
 }
-
-class PasswordTextField extends StatelessWidget {
-  const PasswordTextField({
-    super.key,
-  });
- 
-  @override 
-  Widget build(BuildContext context) {
-    return TextFormField(
-      style: TextStyle(color: Colors.black),
-      obscureText: true,
-
-      decoration: InputDecoration(
-
-        label: Text('Password'),
-        labelStyle: TextStyle(color: Colors.grey),
-        hintText: 'Enter your password',
-        hintStyle: const TextStyle(color: Colors.grey),
-        border: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey),
-            borderRadius: BorderRadius.circular(15)),
-        errorBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey)
-        ),
-        focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey),
-            borderRadius: BorderRadius.circular(15)),
-        enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(width: 1, color: Colors.grey),
-            borderRadius: BorderRadius.circular(15)
-        ),
-      ),
-    );
-  }
-}
-
