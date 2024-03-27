@@ -4,10 +4,14 @@ import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/core/util/assetsUtil/asset_util.dart';
 
-class FirstRoute extends StatelessWidget {
-  const FirstRoute({super.key});
-  
+class OnboardingOne extends StatefulWidget {
+  const OnboardingOne({super.key});
 
+  @override
+  State<OnboardingOne> createState() => _OnboardingOneState();
+}
+
+class _OnboardingOneState extends State<OnboardingOne> {
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -45,8 +49,8 @@ class FirstRoute extends StatelessWidget {
                 const Gap(15),
 
                  const Text('CStudy according to the\n '
-'study plan, make study\n'
-'more motivated',
+                            'study plan, make study\n'
+                            'more motivated',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontFamily: AppConstant.fontName, 

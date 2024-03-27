@@ -51,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
             Gap(40),
             PasswordTextField(),
             Gap(25),
-            Signup(),
+            CreateAccount(),
           ],
         ),
       ),
@@ -59,8 +59,8 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-class Signup extends StatelessWidget {
-  const Signup({
+class CreateAccount extends StatelessWidget {
+  const CreateAccount({
     super.key,
   });
 
@@ -79,9 +79,8 @@ class Signup extends StatelessWidget {
           fontSize: 20,  
           color: Colors.white,
           fontWeight: FontWeight.w600)),
+          
+          );}
 
           
-          );
-  }
-  
 }
