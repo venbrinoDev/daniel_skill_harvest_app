@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/core/util/assetsUtil/asset_util.dart';
 
-class Onboarding extends StatelessWidget {
-  const Onboarding({super.key});
+class FirstRoute extends StatelessWidget {
+  const FirstRoute({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,27 @@ class Onboarding extends StatelessWidget {
                 height: 200,
                 width: 200,
             
-              )
+              ),
+              const Gap(50),
+                 const Text('Create your own\n' 
+                          'study plan',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: AppConstant.fontName, 
+                            fontWeight: FontWeight.w700,
+                            fontSize: 22),),
+                const Gap(15),
+
+                 const Text('CStudy according to the\n '
+'study plan, make study\n'
+'more motivated',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: AppConstant.fontName, 
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16),),
+                 
+
             ],),
           ),
         ),
