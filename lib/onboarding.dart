@@ -3,15 +3,35 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/core/util/assetsUtil/asset_util.dart';
+import 'package:skill_harvest_app/signup_page.dart';
 
-class OnboardingOne extends StatefulWidget {
-  const OnboardingOne({super.key});
+class Onboarding extends StatefulWidget {
+  const Onboarding({super.key});
 
   @override
-  State<OnboardingOne> createState() => _OnboardingOneState();
+  State<Onboarding> createState() => OnboardingState();
 }
 
-class _OnboardingOneState extends State<OnboardingOne> {
+class OnboardingState extends State<Onboarding> {
+  @override
+  void initState() {
+    loadDelay();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  void loadDelay() {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) {
+        return const SignUp_Page();
+      }));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold( 
@@ -55,9 +75,7 @@ class _OnboardingOneState extends State<OnboardingOne> {
                           style: TextStyle(
                             fontFamily: AppConstant.fontName, 
                             fontWeight: FontWeight.w300,
-                            fontSize: 16),),
-                 
-
+                            fontSize: 16),),  
             ],),
           ),
         ),

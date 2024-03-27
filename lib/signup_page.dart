@@ -4,21 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
 import 'package:skill_harvest_app/text_field.dart';
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignUp_Page extends StatefulWidget {
+  const SignUp_Page({super.key});
   @override
-  State<LoginPage> createState() => _LoginPageState();}
+  State<SignUp_Page> createState() => SignUp_PageState();}
 
 
-class _LoginPageState extends State<LoginPage> {
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-  @override
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose(); 
-    super.dispose();}
-  @override     
+class SignUp_PageState extends State<SignUp_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,

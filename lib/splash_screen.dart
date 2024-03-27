@@ -8,10 +8,10 @@ class SpalshScreen extends StatefulWidget {
   const SpalshScreen({super.key});
 
   @override
-  State<SpalshScreen> createState() => _SpalshScreenState();
+  State<SpalshScreen> createState() => SpalshScreenState();
 }
 
-class _SpalshScreenState extends State<SpalshScreen> {
+class SpalshScreenState extends State<SpalshScreen> {
   @override
   void initState() {
     loadDelay();
@@ -26,7 +26,7 @@ class _SpalshScreenState extends State<SpalshScreen> {
   void loadDelay() {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) {
-        return const OnboardingOne();
+        return const Onboarding();
       }));
     });
   }
