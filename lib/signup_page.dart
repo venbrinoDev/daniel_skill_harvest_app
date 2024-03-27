@@ -4,13 +4,16 @@ import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
 import 'package:skill_harvest_app/text_field.dart';
+// ignore: camel_case_types
 class SignUp_Page extends StatefulWidget {
   const SignUp_Page({super.key});
   @override
   State<SignUp_Page> createState() => SignUp_PageState();}
 
 
+// ignore: camel_case_types
 class SignUp_PageState extends State<SignUp_Page> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -72,7 +75,5 @@ class CreateAccount extends StatelessWidget {
           color: Colors.white,
           fontWeight: FontWeight.w600)),
           
-          );}
-
-          
+          );}   
 }
