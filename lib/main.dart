@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:skill_harvest_app/splash_screen.dart';
 
 void main() {
-  runApp(const SkillHarvestApp());
+  runApp(const MyApp());
 }
 
-class SkillHarvestApp extends StatelessWidget {
-  const SkillHarvestApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

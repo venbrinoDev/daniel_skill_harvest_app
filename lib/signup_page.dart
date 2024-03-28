@@ -4,15 +4,10 @@ import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
 import 'package:skill_harvest_app/text_field.dart';
-// ignore: camel_case_types
-class SignUp_Page extends StatefulWidget {
-  const SignUp_Page({super.key});
-  @override
-  State<SignUp_Page> createState() => SignUp_PageState();}
 
 
-// ignore: camel_case_types
-class SignUp_PageState extends State<SignUp_Page> {
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,8 +40,32 @@ class SignUp_PageState extends State<SignUp_Page> {
             EmailTextFild(),
             Gap(40),
             PasswordTextField(),
-            Gap(25),
+            Gap(40),
             CreateAccount(),
+            Gap(20),
+            Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.start,
+
+                   children: [
+                    Text("By creating an account you have to agree\n our Terms and conditions"),
+                  ],
+                ),
+                Gap(50),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text('Already has an account?   '),
+                  Align(
+                    child: TextButton(onPressed: () { 
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => login,));
+                     },
+                    child: Text("Login", style: TextStyle(color: Colors.black),)),
+                  )
+                ],
+              )],
+            ),
           ],
         ),
       ),
@@ -54,11 +73,16 @@ class SignUp_PageState extends State<SignUp_Page> {
   }
 }
 
-class CreateAccount extends StatelessWidget {
+class CreateAccount extends StatefulWidget {
   const CreateAccount({
     super.key,
   });
 
+  @override
+  State<CreateAccount> createState() => _CreateAccountState();
+}
+
+class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -73,7 +97,8 @@ class CreateAccount extends StatelessWidget {
           fontFamily: AppConstant.fontName,
           fontSize: 20,  
           color: Colors.white,
-          fontWeight: FontWeight.w600)),
+          fontWeight: FontWeight.w600)
+          ),
           
           );}   
 }

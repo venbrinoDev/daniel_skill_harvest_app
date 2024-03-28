@@ -8,10 +8,10 @@ class SpalshScreen extends StatefulWidget {
   const SpalshScreen({super.key});
 
   @override
-  State<SpalshScreen> createState() => SpalshScreenState();
+  State<SpalshScreen> createState() => _SpalshScreenState();
 }
 
-class SpalshScreenState extends State<SpalshScreen> {
+class _SpalshScreenState extends State<SpalshScreen> {
   @override
   void initState() {
     loadDelay();
@@ -59,7 +59,7 @@ class SpalshScreenState extends State<SpalshScreen> {
               'We borrow to all',
               style: TextStyle(
                   fontFamily: AppConstant.fontName,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.w300),
             )
           ],

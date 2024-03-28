@@ -13,24 +13,6 @@ class Onboarding extends StatefulWidget {
 }
 
 class OnboardingState extends State<Onboarding> {
-  @override
-  void initState() {
-    loadDelay();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
-  void loadDelay() {
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_) {
-        return const SignUp_Page();
-      }));
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,9 +28,11 @@ class OnboardingState extends State<Onboarding> {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                 const Align(
+                  Align(
                     alignment: Alignment.centerRight,
-                    child: Text('Skip'),
+                    child: TextButton(child: const Text("skip", style: TextStyle(color: Colors.black),), onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const SignUp(),));
+                    },),
                  ),
                  const Gap(30),
             
@@ -68,7 +52,7 @@ class OnboardingState extends State<Onboarding> {
                             fontSize: 22),),
                 const Gap(15),
 
-                 const Text('CStudy according to the\n '
+                 const Text('Study according to the\n '
                             'study plan, make study\n'
                             'more motivated',
                           textAlign: TextAlign.center,
