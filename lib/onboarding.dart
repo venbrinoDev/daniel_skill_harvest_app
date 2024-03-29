@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
@@ -64,16 +66,64 @@ class OnboardingState extends State<Onboarding> {
                                 fontSize: 16,),),
                                 Gap(20),
 
-                     ElevatedButton(
-                      onPressed: null,
-                      child: Text('Enabled'),
-                      )
+                     SignIn(),
                    ],
                  ),  
             ],),
           ),
         ),
       ),
+    );
+  }
+}
+
+class SignIn extends StatefulWidget {
+  const SignIn({
+    super.key,
+  });
+
+  @override
+  State<SignIn> createState() => SignInState();
+}
+
+class SignInState extends State<SignIn> {
+  @override
+  Widget build(BuildContext context) {
+    return  Row(
+      children: [
+        ElevatedButton(
+         onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const SignUp(),));
+         },
+         style: ButtonStyle(
+            backgroundColor: ButtonStyleButton.allOrNull<Color>(const Color(0xFF3D5CFF)),
+            fixedSize: ButtonStyleButton.allOrNull<Size>(const Size(170, 50)),
+          ),
+         child: const Text('Sign Up',
+          style: TextStyle(
+              fontFamily: AppConstant.fontName,
+              fontSize: 20,  
+              color: Colors.white,
+              fontWeight: FontWeight.w600)),
+         ),
+         const Gap(10),
+
+         ElevatedButton(
+         onPressed: () {
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const SignIn(),));
+         },
+         style: ButtonStyle(
+            backgroundColor: ButtonStyleButton.allOrNull<Color>(const Color(0xFF3D5CFF)),
+            fixedSize: ButtonStyleButton.allOrNull<Size>(const Size(170, 50)),
+          ),
+         child: const Text('Login',
+          style: TextStyle(
+              fontFamily: AppConstant.fontName,
+              fontSize: 20,  
+              color: Colors.white,
+              fontWeight: FontWeight.w600)),
+         ),
+      ],
     );
   }
 }

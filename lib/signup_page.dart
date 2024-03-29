@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/constant.dart';
@@ -30,12 +30,12 @@ class SignUp extends StatelessWidget {
               Gap(5),
               EnterDetailsText()],),),
         backgroundColor: Colors.grey.withOpacity(0.2),),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center, 
-          children: const [
+          children: [
             Gap(30),
             EmailTextFild(),
             Gap(40),
@@ -56,7 +56,15 @@ class SignUp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Already has an account?   ')
+                  Text('Already has an account?   ' ), 
+                  Text('Log in',
+                  style: TextStyle(
+                    color: Colors.blueAccent,
+                    fontFamily: AppConstant.fontName,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),)
+                  
                 ]
                   
                   )
