@@ -37,9 +37,9 @@ class OnboardingState extends State<Onboarding> {
                  const Gap(30),
             
               SvgPicture.asset(
-                Assets.onboardingOne,
-                height: 200,
-                width: 200,
+                Assets.onboradingThree,
+                height: 300,
+                width: 300,
             
               ),
               const Gap(50),
@@ -51,15 +51,25 @@ class OnboardingState extends State<Onboarding> {
                             fontWeight: FontWeight.w700,
                             fontSize: 22),),
                 const Gap(15),
+  
+                 const Column(
+                   children: [
+                     Text('Study according to the\n '
+                                'study plan, make study\n'
+                                'more motivated',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontFamily: AppConstant.fontName, 
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,),),
+                                Gap(20),
 
-                 const Text('Study according to the\n '
-                            'study plan, make study\n'
-                            'more motivated',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: AppConstant.fontName, 
-                            fontWeight: FontWeight.w300,
-                            fontSize: 16),),  
+                     ElevatedButton(
+                      onPressed: null,
+                      child: Text('Enabled'),
+                      )
+                   ],
+                 ),  
             ],),
           ),
         ),

@@ -56,20 +56,16 @@ class SignUp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Already has an account?   '),
-                  Align(
-                    child: TextButton(onPressed: () { 
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => login,));
-                     },
-                    child: Text("Login", style: TextStyle(color: Colors.black),)),
+                  Text('Already has an account?   ')
+                ]
+                  
                   )
                 ],
               )],
             ),
-          ],
+         
         ),
-      ),
-    );
+      );
   }
 }
 
