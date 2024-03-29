@@ -66,7 +66,7 @@ class OnboardingState extends State<Onboarding> {
                                 fontSize: 16,),),
                                 Gap(20),
 
-                     SignIn(),
+                     CallToLogin(),
                    ],
                  ),  
             ],),
@@ -77,16 +77,16 @@ class OnboardingState extends State<Onboarding> {
   }
 }
 
-class SignIn extends StatefulWidget {
-  const SignIn({
+class CallToLogin extends StatefulWidget {
+  const CallToLogin({
     super.key,
   });
 
   @override
-  State<SignIn> createState() => SignInState();
+  State<CallToLogin> createState() => CallToLoginState();
 }
 
-class SignInState extends State<SignIn> {
+class CallToLoginState extends State<CallToLogin> {
   @override
   Widget build(BuildContext context) {
     return  Row(
@@ -110,7 +110,7 @@ class SignInState extends State<SignIn> {
 
          ElevatedButton(
          onPressed: () {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const SignIn(),));
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const CallToLogin(),));
          },
          style: ButtonStyle(
             backgroundColor: ButtonStyleButton.allOrNull<Color>(const Color(0xFF3D5CFF)),
