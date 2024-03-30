@@ -1,14 +1,20 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:skill_harvest_app/Login_page.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
 import 'package:skill_harvest_app/text_field.dart';
 
-
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   const SignUp({super.key});
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,53 +35,70 @@ class SignUp extends StatelessWidget {
                       color: Colors.black,
                       fontWeight: FontWeight.bold)),
               Gap(5),
-              EnterDetailsText()],),),
-        backgroundColor: Colors.grey.withOpacity(0.2),),
-      body: const Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center, 
-          children: [
-            Gap(30),
-            EmailTextFild(),
-            Gap(40),
-            PasswordTextField(),
-            Gap(40),
-            CreateAccount(),
-            Gap(20),
-            Column(
-              children: [
-                Row(mainAxisAlignment: MainAxisAlignment.start,
-
-                   children: [
-                    Text("By creating an account you have to agree\n our Terms and conditions"),
+              EnterDetailsText()
+            ],
+          ),
+        ),
+        backgroundColor: Colors.grey.withOpacity(0.2),
+      ),
+      body: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Gap(30),
+              const EmailTextFild(),
+              const Gap(40),
+              const PasswordTextField(),
+              const Gap(40),
+              const CreateAccount(),
+              const Gap(20),
+              Column(children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Checkbox(
+                      activeColor: Colors.blue,
+                      value: isChecked,
+                      onChanged: (value) {
+                        setState(() {
+                          isChecked = !isChecked;
+                        });
+                      },
+                    ),
+                    const Text("By creating an account you have to agree\n our Terms and conditions"),
                   ],
                 ),
-                Gap(50),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text('Already has an account?   ' ), 
-                  Align(
-                    alignment: Alignment.centerRight,
-                    // child: TextButton(onPressed: () { 
-                    //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (contest) => const Login(),));
-                    //  },
-                    child: Text('Login',style: TextStyle(color: Colors.blue,
-                    fontFamily: AppConstant.fontName,fontWeight: FontWeight.bold),),),]
-                  ),
-                  
-                ]
-                  
-                  )
-                ],
-              )
-            ),
-         
-        );
-      
+                const Gap(50),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text('Already has an account?   '),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                          child: const Text(
+                            'Login',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontFamily: AppConstant.fontName,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                              builder: (contest) => const Login(),
+                            ));
+                          },
+                        ),
+                      ),
+                    ]),
+              ])
+            ],
+          )),
+    );
   }
 }
 
@@ -92,21 +115,15 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: (){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const Login(),));
+      onPressed: () {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => const Login(),
+        ));
       },
-      style: ButtonStyle(
-        backgroundColor: ButtonStyleButton.allOrNull<Color>(const Color(0xFF3D5CFF)),
-        fixedSize: ButtonStyleButton.allOrNull<Size>(Size(MediaQuery.of(context).size.width, 50))
-      ),
-    child:
-     const Text('Create Account', 
-      style: TextStyle(
-          fontFamily: AppConstant.fontName,
-          fontSize: 20,  
-          color: Colors.white,
-          fontWeight: FontWeight.w600)
-          ),
-          
-          );}   
+      style: ElevatedButton.styleFrom(fixedSize: const Size(400, 60), backgroundColor: Colors.blue),
+      child: const Text('Create Account',
+          style: TextStyle(
+              fontFamily: AppConstant.fontName, fontSize: 20, color: Colors.white, fontWeight: FontWeight.w600)),
+    );
+  }
 }

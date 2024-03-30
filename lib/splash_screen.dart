@@ -1,5 +1,3 @@
-
-
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -59,10 +57,7 @@ class _SpalshScreenState extends State<SpalshScreen> {
             const Gap(5),
             const Text(
               'We borrow to all',
-              style: TextStyle(
-                  fontFamily: AppConstant.fontName,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w300),
+              style: TextStyle(fontFamily: AppConstant.fontName, fontSize: 25, fontWeight: FontWeight.w300),
             )
           ],
         ),
