@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:skill_harvest_app/Login_page.dart';
 import 'package:skill_harvest_app/constant.dart';
 import 'package:skill_harvest_app/enter_details_widget.dart';
 import 'package:skill_harvest_app/text_field.dart';
@@ -57,23 +58,24 @@ class SignUp extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text('Already has an account?   ' ), 
-                  Text('Log in',
-                  style: TextStyle(
-                    color: Colors.blueAccent,
-                    fontFamily: AppConstant.fontName,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),)
+                  Align(
+                    alignment: Alignment.centerRight,
+                    // child: TextButton(onPressed: () { 
+                    //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (contest) => const Login(),));
+                    //  },
+                    child: Text('Login',style: TextStyle(color: Colors.blue,
+                    fontFamily: AppConstant.fontName,fontWeight: FontWeight.bold),),),]
+                  ),
                   
                 ]
                   
                   )
                 ],
-              )],
+              )
             ),
          
-        ),
-      );
+        );
+      
   }
 }
 
@@ -90,9 +92,11 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: (){},
+      onPressed: (){
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const Login(),));
+      },
       style: ButtonStyle(
-        backgroundColor: ButtonStyleButton.allOrNull<Color>(Color(0xFF3D5CFF)),
+        backgroundColor: ButtonStyleButton.allOrNull<Color>(const Color(0xFF3D5CFF)),
         fixedSize: ButtonStyleButton.allOrNull<Size>(Size(MediaQuery.of(context).size.width, 50))
       ),
     child:

@@ -1,23 +1,36 @@
-
+// ignore: file_names
 
 import 'package:flutter/material.dart';
+import 'package:skill_harvest_app/onboarding.dart';
 
-class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
-  @override
-  State<SignIn> createState() => _SignInState();
-}
+  
 
-class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        toolbarHeight: 120,
-        leadingWidth: double.infinity,
-    ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: 300,
+          title: const Text('Continue with Phone'),
+          backgroundColor: Colors.grey[200],
+          elevation: 1,
+          leading: IconButton(
+            onPressed: (){
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const Onboarding(),));
+            }, 
+            icon: const Icon(Icons.navigate_before_outlined),
+            
+            
+          ) 
+        ),
+      ),
+
+      
+
     );
   }
 }
